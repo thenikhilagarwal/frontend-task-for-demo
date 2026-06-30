@@ -25,7 +25,7 @@ function CrmCell({ crm, crmTime }) {
   return (
     <div className="flex flex-col gap-0.5">
       <div className='flex'>
-        {isSynced ? <span className="flex items-center gap-1.5 text-[#5E5873] font-semibold"><img src={crmImage} alt={crm} className='size-4'/> {crm}</span> : <span className='text-[#6E6B7B] border border-[#E7EDF6] rounded-sm py-1 px-1.5 whitespace-nowrap'>Sync to CRM</span>}
+        {isSynced ? <span className="flex items-center gap-1.5 text-[#5E5873] font-semibold"><img src={crmImage} alt={crm} className='size-4'/> {crm}</span> : <span className='text-slate-700 border border-[#E7EDF6] rounded-sm py-1 px-1.5 whitespace-nowrap'>Sync to CRM</span>}
         <span className={`text-sm font-semibold ${isSynced ? 'text-slate-800' : 'text-slate-600'}`}></span>
       </div>
       {isSynced && <div className='text-[#6D6B77] text-xs font-normal'>{crmTime}</div>}
