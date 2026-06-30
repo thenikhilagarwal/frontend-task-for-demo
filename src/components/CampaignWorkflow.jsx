@@ -341,7 +341,7 @@ export default function CampaignWorkflow({
 
         {/* STEP 1: DEFINE TARGET AUDIENCE */}
         {currentStep === 1 && (
-          <div className='h-[calc(100vh-366px)]'>
+          <div className='min-h-[calc(100vh-366px)]'>
           <div className="relative pl-8 space-y-6 ">
             {/* Timeline Line */}
             <div className="absolute left-[9px] top-2 bottom-2 w-0.5 bg-[#EAEFFF] dark:bg-slate-850"></div>
@@ -1284,7 +1284,7 @@ export default function CampaignWorkflow({
                     </div>
 
                     {/* Grid of metrics */}
-                    <div className="grid grid-cols-1 sm:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-[#DBDBDB] dark:divide-slate-800">
+                    <div className="grid grid-cols-1 sm:grid-cols-5 sm:divide-y sm:divide-x divide-[#DBDBDB] dark:divide-slate-800 sm:gap-0 gap-4">
                       {/* Stat 1: New Leads */}
                       <div className="flex flex-col justify-between min-h-[160px] bg-white dark:bg-slate-900 pe-5 border-l border-[#DBDBDB] dark:border-slate-800">
                         <div className="p-3 space-y-1">
@@ -1295,7 +1295,7 @@ export default function CampaignWorkflow({
                       </div>
 
                       {/* Stat 2: Invites Sent */}
-                      <div className="flex flex-col justify-between min-h-[160px] bg-white pe-5 dark:bg-slate-900">
+                      <div className="flex flex-col justify-between min-h-[160px] bg-white pe-5 dark:bg-slate-900 border-l sm:border-0 border-[#DBDBDB] dark:border-slate-800">
                         <div className="p-3 space-y-1">
                           <div className="flex items-center gap-1">
                             <span className="font-bold text-[#5E5873] dark:text-slate-400 uppercase tracking-wider text-sm">Invites Sent</span>
@@ -1310,7 +1310,7 @@ export default function CampaignWorkflow({
                       </div>
 
                       {/* Stat 3: Invites Accepted */}
-                      <div className="flex flex-col justify-between min-h-[160px] bg-white pe-5 dark:bg-slate-900">
+                      <div className="flex flex-col justify-between min-h-[160px] bg-white pe-5 dark:bg-slate-900 border-l sm:border-0 border-[#DBDBDB] dark:border-slate-800">
                         <div className="p-3 space-y-1">
                           <div className="flex items-center gap-1">
                             <span className="font-bold text-[#5E5873] dark:text-slate-400 uppercase tracking-wider text-xs">Invites Accepted</span>
@@ -1325,7 +1325,7 @@ export default function CampaignWorkflow({
                       </div>
 
                       {/* Stat 4: Messages Sent */}
-                      <div className="flex flex-col justify-between min-h-[160px] bg-white pe-5 dark:bg-slate-900">
+                      <div className="flex flex-col justify-between min-h-[160px] bg-white pe-5 dark:bg-slate-900 border-l sm:border-0 border-[#DBDBDB] dark:border-slate-800">
                         <div className="p-3 space-y-1">
                           <div className="flex items-center gap-1">
                             <span className="font-bold text-[#5E5873] dark:text-slate-400 uppercase tracking-wider text-xs">Messages Sent</span>
@@ -1340,7 +1340,7 @@ export default function CampaignWorkflow({
                       </div>
 
                       {/* Stat 5: Replies */}
-                      <div className="flex flex-col justify-between min-h-[160px] bg-white dark:bg-slate-900">
+                      <div className="flex flex-col justify-between min-h-[160px] bg-white dark:bg-slate-900 border-l sm:border-0 border-[#DBDBDB] dark:border-slate-800">
                         <div className="p-3 space-y-1">
                           <div className="flex items-center gap-1">
                             <span className="font-bold text-[#5E5873] dark:text-slate-400 uppercase tracking-wider text-xs">Replies</span>
@@ -1357,11 +1357,11 @@ export default function CampaignWorkflow({
                   </div>
 
                   {/* Row with two sub-cards: Campaign Actions & Reply Performance */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
                     {/* Card 3: Campaign Actions */}
-                    <div className="bg-white dark:bg-slate-900 border border-[#EBE9F1] dark:border-slate-800 rounded-md flex flex-col justify-between min-h-[300px] shadow-xs col-span-2">
+                    <div className="bg-white dark:bg-slate-900 border border-[#EBE9F1] dark:border-slate-800 rounded-md flex flex-col justify-between min-h-[300px] shadow-xs xl:col-span-2">
                       <div className="space-y-4 p-5">
-                        <div className="flex justify-between items-center pb-3">
+                        <div className="flex flex-wrap md:gap-0 gap-3 justify-between items-center pb-3">
                           <div>
                             <h3 className="text-base font-semibold text-[#444050] dark:text-slate-150">Campaign Actions</h3>
                             <p className="text-xs text-[#9692A4] dark:text-slate-450 font-bold">Execution stats & engagement signals</p>
@@ -1375,7 +1375,7 @@ export default function CampaignWorkflow({
                         {/* Layout grid of list metrics */}
                         <div className="grid grid-cols-2 gap-x-4 gap-y-3.5 text-xs">
                           {/* Column 1 */}
-                          <div className="space-y-3 text-base">
+                          <div className="space-y-3 md:text-base text-sm">
                             <div className="flex justify-between items-center">
                               <span className="font-bold text-[#444050] dark:text-slate-300">Remaining Leads:</span>
                               <span className="font-semibold text-[#444050] dark:text-slate-100">110</span>
@@ -1394,7 +1394,7 @@ export default function CampaignWorkflow({
                             </div>
                           </div>
                           {/* Column 2 */}
-                          <div className="space-y-3 text-base">
+                          <div className="space-y-3 md:text-base text-sm">
                             <div className="flex justify-between items-center">
                               <span className="font-bold text-[#444050] dark:text-slate-300">Profile Viewed:</span>
                               <span className="font-semibold text-[#444050] dark:text-slate-100">45</span>
@@ -1668,7 +1668,7 @@ export default function CampaignWorkflow({
                     <p>If a lead answers your invite, message, or InMail, we<br />stop sending further steps automatically. <a className='text-primary' href="#">Learn more</a></p>
                   </div>
                   : null}
-                <div className='flex flex-grow-1 items-center justify-end gap-4'>
+                <div className='flex flex-1 items-center justify-end gap-4'>
                   {currentStep === 1 ? '' : <button
                     type="button"
                     onClick={handleBackStep}
