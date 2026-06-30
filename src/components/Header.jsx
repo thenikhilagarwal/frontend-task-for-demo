@@ -6,7 +6,7 @@ export default function Header({ breadcrumbs }) {
   const items = breadcrumbs || [{ label: 'Campaign' }];
 
   return (
-    <header className="h-16 bg-white dark:bg-slate-900 rounded-md flex items-center justify-between px-6 sticky top-0 z-10 transition-colors duration-200 shadow-lg">
+    <header className="h-16 bg-white dark:bg-slate-900 rounded-md flex items-center justify-between px-6 transition-colors duration-200 shadow-lg">
       {/* Breadcrumbs */}
       <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
         <a
