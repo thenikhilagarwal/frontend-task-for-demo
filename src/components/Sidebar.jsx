@@ -29,7 +29,7 @@ export default function Sidebar({ theme, setTheme, activeTab, setActiveTab }) {
 
 
   return (
-    <aside className={`border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between h-screen top-0 transition-all duration-300 select-none ${isSidebarCollapsed ? 'w-15' : 'w-64'}`}>
+    <aside className={`fixed left-0 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between h-screen top-0 transition-all duration-300 select-none ${isSidebarCollapsed ? 'w-15' : 'w-64'}`}>
       {/* Top Brand Header */}
       <div>
         <div className="flex items-center justify-between px-4 py-5">
