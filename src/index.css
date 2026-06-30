@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --color-primary: #3666EE;
+  --color-slate-700: #6E6B7B;
+  --color-brand-blue: #4f7df2;
+  --color-brand-blue-hover: #3b6cd8;
+  --color-brand-bg-light: #f5f8ff;
+  --color-sidebar-bg: #ffffff;
+  --color-sidebar-border: #f1f5f9;
+  --color-grideant-1: #8BA6FF;
+  --color-grideant-2: #3762EE;
+  --color-gray: #F4F5F8;
+
+}
+
+@layer base {
+
+  html,
+  body,
+  #root {
+    @apply h-full w-full;
+  }
+}
+
+/* Custom scrollbars for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@layer components {
+  @media (max-width: 768px) {
+    .activeSidebar{
+      @apply ps-15
+    }
+    .activeSidebar aside {
+      @apply fixed left-0 z-50;
+    }
+  }
+}
