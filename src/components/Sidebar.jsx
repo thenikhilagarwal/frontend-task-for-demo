@@ -1,29 +1,9 @@
 import { Sun, Moon, PanelLeftClose } from 'lucide-react';
 import logo from '../assets/logo.svg';
-import { useEffect, useState } from 'react';
 
-export default function Sidebar({ theme, setTheme, activeTab, setActiveTab }) {
 
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+export default function Sidebar({ theme, setTheme, activeTab, setActiveTab,isSidebarCollapsed,setIsSidebarCollapsed }) {
 
-  const handleResize = () =>{
-    if(window.innerWidth < 768){
-      setIsSidebarCollapsed(true)
-    }else{
-      setIsSidebarCollapsed(false)
-    }
-  }
-
-  useEffect(()=>{
-    handleResize(); // Run on initial load
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-  },[])
 
   
 
