@@ -93,17 +93,22 @@ export default function App() {
 
   const handleResize = () =>{
     if(window.innerWidth < 768){
-      setIsSidebarCollapsed(false);
+      setIsSidebarCollapsed(true)
     }else{
-      setIsSidebarCollapsed(true);
+      setIsSidebarCollapsed(false)
     }
   }
-  
+
   useEffect(()=>{
-    handleResize();
-    window.addEventListener('resize',handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [])
+    handleResize(); // Run on initial load
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
+  },[])
 
   return (
     <div className={`activeSidebar md:ps-63 min-h-screen bg-[#F8F8F8] dark:bg-slate-950 flex flex-row transition-colors duration-200 ${isSidebarCollapsed ? 'ps-15!' : ''}`}>
