@@ -90,7 +90,7 @@ export default function App() {
   });
 
   return (
-    <div className="activeSidebar min-h-screen bg-[#F8F8F8] dark:bg-slate-950 flex flex-row transition-colors duration-200">
+    <div className="activeSidebar md:ps-63 min-h-screen bg-[#F8F8F8] dark:bg-slate-950 flex flex-row transition-colors duration-200">
       {/* Sidebar navigation */}
       <Sidebar
         theme={theme}
