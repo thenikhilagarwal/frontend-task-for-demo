@@ -89,12 +89,30 @@ export default function App() {
     return matchesSearch && matchesStatus;
   });
 
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
+  const handleResize = () =>{
+    if(window.innerWidth < 768){
+      setIsSidebarCollapsed(false);
+    }else{
+      setIsSidebarCollapsed(true);
+    }
+  }
+  
+  useEffect(()=>{
+    handleResize();
+    window.addEventListener('resize',handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [])
+
   return (
-    <div className="activeSidebar md:ps-63 min-h-screen bg-[#F8F8F8] dark:bg-slate-950 flex flex-row transition-colors duration-200">
+    <div className={`activeSidebar md:ps-63 min-h-screen bg-[#F8F8F8] dark:bg-slate-950 flex flex-row transition-colors duration-200 ${isSidebarCollapsed ? 'ps-15!' : ''}`}>
       {/* Sidebar navigation */}
       <Sidebar
         theme={theme}
         setTheme={setTheme}
+        isSidebarCollapsed={isSidebarCollapsed}
+        setIsSidebarCollapsed={setIsSidebarCollapsed}
         activeTab={activeTab}
         setActiveTab={(tab) => {
           setActiveTab(tab);
